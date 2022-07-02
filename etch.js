@@ -26,7 +26,7 @@
                     parseInt(Math.random() * 255),
                     parseInt(Math.random() * 255),
                 ];
-                event.target.style = `background: rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+                event.target.style = `background-color: rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
                 break;
             case 'gradient':
                 const bgColor = event.target.style['background-color'];
@@ -36,11 +36,11 @@
                     const [_, rawOpacity] = bgColor.match(/rgba\(0, 0, 0, ([0-9.]*)\)/);
                     const opacity = parseFloat(rawOpacity);
                     if (opacity < 1) {
-                        event.target.style = `background: rgba(0, 0, 0, ${opacity + 0.1})`;
+                        event.target.style = `background-color: rgba(0, 0, 0, ${opacity + 0.1})`;
                     }
                 } else {
                     if (bgColor !== maxGradient) {
-                        event.target.style = 'background: rgba(0, 0, 0, 0.1)';
+                        event.target.style = 'background-color: rgba(0, 0, 0, 0.1)';
                     }
                 }
                 break;
