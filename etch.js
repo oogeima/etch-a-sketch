@@ -48,7 +48,9 @@
     });
 
     document.querySelector('input[type="number"]').addEventListener('change', event => {
-        createGrid(event.target.value);
+        if (event.target !== document.getElementById('etch')) {
+            createGrid(event.target.value);
+        }
     });
 
     createGrid(document.querySelector('input[type="number"]').value);
