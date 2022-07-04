@@ -18,6 +18,9 @@
     }
 
     document.getElementById('etch').addEventListener('mousemove', event => {
+        if (event.target === document.getElementById('etch')) {
+            return;
+        }
         const mode = document.querySelector('input[name="mode"]:checked').value;
         switch (mode) {
             case 'rainbow':
